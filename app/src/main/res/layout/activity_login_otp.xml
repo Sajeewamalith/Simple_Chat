@@ -100,7 +100,7 @@
             android:layout_margin="10dp"
             android:background="@drawable/edit_text_rouned_corner"
             android:elevation="5dp"
-            android:id="@+id/login_mobile_number"
+            android:id="@+id/login_otp"
             />
 
     </LinearLayout>
@@ -116,7 +116,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/btn_rounded_corner"
             android:text="NEXT"
-            android:id="@+id/send_otp_btn"/>
+            android:id="@+id/login_next_btn"/>
         <ProgressBar
             android:layout_width="32dp"
             android:layout_height="wrap_content"
@@ -131,7 +131,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="10"
         android:gravity="center"
-        android:text="Resend OTP in 30 sec"/>
+        android:text="Resend OTP in 30 sec"
+        android:id="@+id/resend_otp_textview"/>
 
 
 </LinearLayout>
