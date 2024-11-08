@@ -9,7 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.Objects;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class LoginOtpActivity extends AppCompatActivity {
 
@@ -28,5 +32,11 @@ public class LoginOtpActivity extends AppCompatActivity {
         //get phone number from previous activity
         phoneNumber = getIntent().getStringExtra("phone");
         Toast.makeText(getApplicationContext(), phoneNumber, Toast.LENGTH_LONG).show();
+
+        /*
+        // check if firebase is connect or not
+        Map<String, Object> data = new HashMap<>();
+        FirebaseFirestore.getInstance().collection("test").add(data);
+         */
     }
 }
