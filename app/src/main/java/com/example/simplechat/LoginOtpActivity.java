@@ -1,6 +1,7 @@
 package com.example.simplechat;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,7 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Objects;
+
 public class LoginOtpActivity extends AppCompatActivity {
+
+    String phoneNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,8 @@ public class LoginOtpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //get phone number from previous activity
+        phoneNumber = getIntent().getStringExtra("phone");
+        Toast.makeText(getApplicationContext(), phoneNumber, Toast.LENGTH_LONG).show();
     }
 }
